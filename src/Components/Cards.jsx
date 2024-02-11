@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import { Component } from 'react'
 import './Static/Cards.css'
-import { Link } from "react-router-dom";
+import sitting from '../assets/sitting.png'
 
 export class Cards extends Component {
     static propTypes = {}
@@ -9,10 +8,10 @@ export class Cards extends Component {
     render() {
         return (
             <>
-                <div class="card card-image-cover">
-                    <div class="card-body">
-                    <img src={this.props.img} alt="" />
-                        <a href={this.props.link} class="btn btn-primary">{this.props.text}</a>
+                <div className="card card-image-cover">
+                    <div className="card-body">
+                    <img src={sitting} alt="" />
+                        <a href={this.props.link} className="btn btn-primary">{this.props.text}</a>
                     </div>
                 </div>
             </>

@@ -1,3 +1,5 @@
+import tailwindforms from "@tailwindcss/forms"
+import rippleui from "rippleui"
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,6 +9,10 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
-  
-}
+  plugins: [rippleui, tailwindforms,],
+
+  /** @type {import('rippleui').Config} */
+  ripple : {
+    prefix: "rip-",
+  }
+} 

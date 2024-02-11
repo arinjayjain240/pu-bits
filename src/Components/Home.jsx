@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import  { Component } from 'react'
 import './Static/Home.css'
-import sitting from '../assets/a.png'
+import sitting from '../assets/sitting.png'
 import Cards from './Cards'
-import logo from '../assets/BITS.png'
 export class Home extends Component {
   static propTypes = {}
 
@@ -26,16 +24,16 @@ export class Home extends Component {
         <div className='bottom'>
           <div className="container below">
             <div className="item">
-              <Cards link='http://localhost:5173/ps2' img={logo} text="PS2" />
+              <Cards link='/ps1' text="PS2" />
             </div>
             <div className="item">
-              <Cards  link='http://localhost:5173/ps1' img={logo} text="PS1" />
+              <Cards  link='/ps1' text="PS1" />
             </div>
             <div className="item">
-              <Cards  link='http://localhost:5173/si' img={logo} text="SI" />
+              <Cards  link='https://google.com' text="SI" />
             </div>
             <div className="item">
-              <Cards  link='http://localhost:5173/placements' img={logo} text="PLACEMENTS" />
+              <Cards  link='https://google.com' text="PLACEMENTS" />
             </div>
           </div>
         </div>

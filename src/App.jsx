@@ -1,34 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+//import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './Components/Navbar'
 import Home from './Components/Home'
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PS2 from './Components/PS2'
-import PS1 from './Components/PS1'
-
+import Ps1 from "./Components/ps1"
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Navbar />
-      <BrowserRouter>
-      <Routes>
-        <Route>
-          <Route index element={<Home />} />
-          <Route path="ps2" element={<PS2 />} />
-          <Route path="ps1" element={<PS1 />} />
-          <Route path="si" element={<PS2 />} />
-          <Route path="placements" element={<PS2 />} />
-        </Route>
-      </Routes>
+    <BrowserRouter>
+    { <Navbar />}
+    <Routes>
+    
+      <Route path = "/" element = {<Home />} />
+        <Route path = "/ps1" element = {<Ps1 /> }/>
+    </Routes>
+    
     </BrowserRouter>
     </>
   )
 }
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+
 export default App
